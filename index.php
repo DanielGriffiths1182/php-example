@@ -1,7 +1,14 @@
 <?php
 
+//  init variables
 $countryAbrievErr = $addressErr = $zipcodeErr = $cityErr = $stateErr = "";
 $countryAbriev = $continent = $address = $zipcode = $city = $state = "";
+
+// NOTE I tried to find an API so I could do address verifications through API calls,
+// and GET the continent - but I couldn't find one
+
+// NOTE If I was working on this on my own for a longer period of time I would find an API for this, at best
+// - or at worst, build a little database so that I don't have to deal with a huge array in my index.php
 $country = array(
   "AD" => "Europe",
   "AE"=> "Asia",
@@ -243,6 +250,7 @@ $country = array(
   "ZW"=> "Africa"
 );
 
+// if server recieves POST run conditional
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["countryAbriev"])) {
         $countryAbrievErr = "Enter Abrieviation";
@@ -292,6 +300,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+// basic trimming of input
 function trim_input($location) {
     $location = trim($location);
     $location = stripslashes($location);
@@ -301,6 +310,7 @@ function trim_input($location) {
 }
 ?>
 
+<!-- Begining HTML view -->
 <html>
     <head>
         <title>Address Finder</title>
@@ -308,6 +318,8 @@ function trim_input($location) {
     </head>
     <body>
         <h1>The Address Form</h1>
+
+        <!-- form input -->
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             Address: <input class="input" type="text" name="address" value="<?php echo $address;?>">
                 <span class="error"><?php echo $addressErr;?></span>
@@ -329,6 +341,8 @@ function trim_input($location) {
             </div>
         </form>
         <?php
+        
+        // Loop through BAD ARRAY!!! and when we get a match, we interpolate our variables
             foreach ($country as $key => $value) {
                 if ($countryAbriev == $key) {
                     echo "<p class='address'>Address: $address, $zipcode</p>";

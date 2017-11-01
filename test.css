@@ -1,12 +1,15 @@
+/* main */
 body {
   margin: auto;
   width: 60%;
   text-align: center;
 }
+/* title */
 h1 {
   font-variant: small-caps;
   font-size: 50px;
 }
+/* submit button */
 .button {
   max-width: 960px;
 		margin:0 auto;
@@ -38,9 +41,11 @@ h1 {
   cursor: pointer;
   outline: none;
 }
+/*  error message  */
 .error {
 font-size: 10px;
 }
+/*  address output  */ 
 .address {
   font-variant: small-caps;
 }
