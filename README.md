@@ -16,6 +16,11 @@
 
 - *singed up for heroku, debugged the issues I had at deployment*
 
+## If More Time Was Avaliable
+- *build database, or find API for address work - this would enable a cleaner form for user experience as well as code*
+- *spend some time on styles - button is done, but lots of little issues that would be nice to resolve*
+- *possibly OOP structure, rather than procedural*
+
 # Instructions
 
 1. Go to https://warm-lake-66132.herokuapp.com/
