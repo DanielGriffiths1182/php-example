@@ -1,6 +1,6 @@
 # php-example
 
-* Notes
+*Notes*
 - Time spent, 2 hours. 
 
 - Install and configure MAMP - php localhosting software
