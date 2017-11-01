@@ -4,7 +4,7 @@
 $countryAbrievErr = $addressErr = $zipcodeErr = $cityErr = $stateErr = "";
 $countryAbriev = $continent = $address = $zipcode = $city = $state = "";
 
-// NOTE I tried to find an API so I could do address verifications through API calls,
+//  NOTE I tried to find an API so I could do address verifications through API calls,
 // and GET the continent - but I couldn't find one
 
 // NOTE If I was working on this on my own for a longer period of time I would find an API for this, at best
@@ -294,6 +294,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $zipcode = "";
     } else {
         $zipcode = trim_input($_POST["zipcode"]);
+        if (!is_numeric($zipcode)) {
+            $zipcodeErr = "Enter Only Numbers";
+        }
     }
 }
 
@@ -338,7 +341,6 @@ function trim_input($location) {
             </div>
         </form>
         <?php
-
         // Loop through BAD ARRAY!!! and when we get a match, we interpolate our variables
             foreach ($country as $key => $value) {
                 if ($countryAbriev == $key) {
