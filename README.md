@@ -1,7 +1,7 @@
 # php-example
 *Time spent, 2 hours.* 
 
-*Notes*
+*2 hour process*
 - *Install and configure MAMP - php localhosting software*
 
 - *IMPORTANT: Wanted to find an API so I could do address verifications through API calls, and GET the continent/other relevant data from user input - but I couldn't find one*
