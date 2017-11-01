@@ -1,5 +1,6 @@
 # php-example
 
+*Notes
 - Time spent, 2 hours. 
 
 - Install and configure MAMP - php localhosting software
@@ -16,7 +17,7 @@
 
 - singed up for heroku, debugged the issues I had at deployment
 
-#Instructions
+# Instructions
 
 1. Go to https://warm-lake-66132.herokuapp.com/
 2. Enter your address, make sure to meet the validations
