@@ -264,14 +264,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["address"])) {
         $addressErr = "Enter Street Address";
-        $address = "No Street Address";
+        $address = "";
     } else {
         $address = trim_input($_POST["address"]);
     }
 
     if (empty($_POST["city"])) {
         $cityErr = "Enter City";
-        $city = "No City";
+        $city = "";
     } else {
         $city = trim_input($_POST["city"]);
         if (!preg_match("/^[a-zA-Z ]*$/",$city)) {
@@ -281,7 +281,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["state"])) {
         $stateErr = "Enter Abrieviation";
-        $state = "No State";
+        $state = "";
     } else {
         $state = trim_input($_POST["state"]);
         if (!preg_match("/^[a-zA-Z ]*$/",$state)) {
@@ -291,12 +291,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!is_numeric($_POST["zipcode"])) {
         $zipcodeErr = "Enter Your Zipcode";
-        $zipcode = "Zip Error";
+        $zipcode = "";
     } else {
         $zipcode = trim_input($_POST["zipcode"]);
-        if (!is_numeric($zipcode)) {
-            $zipcodeErr = "Enter Only Numbers";
-        }
     }
 }
 
@@ -341,7 +338,7 @@ function trim_input($location) {
             </div>
         </form>
         <?php
-        
+
         // Loop through BAD ARRAY!!! and when we get a match, we interpolate our variables
             foreach ($country as $key => $value) {
                 if ($countryAbriev == $key) {
