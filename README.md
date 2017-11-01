@@ -1,5 +1,5 @@
-# php-example
-*Time spent, 2 hours.* 
+# php-example | Address Form
+*Daniel Griffiths PHP Example* 
 
 ## 2 hour process ##
 - *Install and configure MAMP - php localhosting software*
