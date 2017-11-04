@@ -23,6 +23,5 @@
 
 # Instructions
 
-1. Go to https://warm-lake-66132.herokuapp.com/
 2. Enter your address, make sure to meet the validations
 3. Select submit, and see the returned address with continent
