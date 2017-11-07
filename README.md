@@ -2,8 +2,6 @@
 *Daniel Griffiths PHP Example* 
 
 ## 2 hour process ##
-- *Install and configure MAMP - php localhosting software*
-
 - *IMPORTANT: Wanted to find an API so I could do address verifications through API calls, and GET the continent/other relevant data from user input - but I couldn't find one*
 
 - *Since I couldn't find an API to do that, I am doing something I don't want to do. I am taking an array of (country=>continent) objects and matching based on user input*
