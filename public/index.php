@@ -11,11 +11,9 @@
     $countryAbrievErr = $addressErr = $zipcodeErr = $cityErr = $stateErr = "";
     $countryAbriev = $continent = $address = $zipcode = $city = $state = "";
 
-    //  NOTE I tried to find an API so I could do address verifications through API calls,
-    // and GET the continent - but I couldn't find one
+    //  NOTE tried to find an API (under time limit) for address verifications through API calls,
+    // and GET the continent - could not. Instead added array(initial => continent) in included file
 
-    // NOTE If I was working on this on my own for a longer period of time I would find an API for this, at best
-    // - or at worst, build a little database so that I don't have to deal with a huge array in my index.php
     include 'countries.php';
 
     // if server recieves POST run conditional
@@ -102,7 +100,7 @@
             </div>
         </form>
         <?php
-        // Loop through BAD ARRAY!!! and when we get a match, we interpolate our variables
+        // Loop through and when we get a match, we interpolate our variables
             foreach ($country as $key => $value) {
                 if ($countryAbriev == $key) {
                     echo "<p class='address'>Address: $address, $zipcode</p>";
