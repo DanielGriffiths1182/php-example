@@ -12,22 +12,22 @@ h1 {
 /* submit button */
 .button {
   max-width: 960px;
-		margin:0 auto;
-    color: crimson;
+  margin:0 auto;
+  color: crimson;
 }
 .button .submission {
   display: inline-block;
-	color: #FFF;
-	background-color: #699DB6;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 12px;
-	padding: 10px 30px;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border: 1px solid;
-	border-bottom-width: 3px;
+  color: #FFF;
+  background-color: #699DB6;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid;
+  border-bottom-width: 3px;
   border-color: rgba(0,0,0,0.3);
   text-shadow: 0 1px 0 rgba(0,0,0,0.5);
 }
@@ -43,7 +43,7 @@ h1 {
 }
 /*  error message  */
 .error {
-font-size: 10px;
+  font-size: 10px;
 }
 /*  address output  */ 
 .address {
